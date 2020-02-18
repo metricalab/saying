@@ -1,0 +1,38 @@
+package com.metricalab.saying.dao;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.metricalab.saying.entity.Saying;
+
+public interface ISayingDAO extends JpaRepository<Saying, Long> {
+
+	Optional<Saying> findFirstByOrderByQualityDesc();
+
+	@Query(value = "SELECT * FROM sayings ORDER BY RAND() LIMIT 1", nativeQuery = true)
+	Optional<Saying> findRandom();
+
+	Optional<List<Saying>> findTop5ByOrderByQuality();
+
+	Optional<List<Saying>> findTop10ByOrderByQuality();
+
+	Optional<List<Saying>> findAllByOrderByQualityDesc();
+
+	Optional<List<Saying>> findAllByOrderByQualityAsc();
+
+	Optional<List<Saying>> findByUser(String user);
+
+	Optional<List<Saying>> findByTextContainingIgnoreCase(String text);
+
+	Optional<List<Saying>> findByUserContainingIgnoreCase(String user);
+
+	Optional<List<Saying>> findByUserContainingIgnoreCaseOrderByUserDesc(String user);
+
+	Optional<List<Saying>> findByUserContainingIgnoreCaseOrderByUserAsc(String user);
+
+	@Query(value = "SELECT AVG(quality) FROM sayings", nativeQuery = true)
+	public Double avg();
+}
