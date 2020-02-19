@@ -23,15 +23,15 @@ public interface ISayingDAO extends JpaRepository<Saying, Long> {
 
 	Optional<List<Saying>> findAllByOrderByQualityAsc();
 
-	Optional<List<Saying>> findByUser(String user);
+	Optional<List<Saying>> findByOrigin(String origin);
 
 	Optional<List<Saying>> findByTextContainingIgnoreCase(String text);
 
-	Optional<List<Saying>> findByUserContainingIgnoreCase(String user);
+	Optional<List<Saying>> findByOriginContainingIgnoreCase(String origin);
 
-	Optional<List<Saying>> findByUserContainingIgnoreCaseOrderByUserDesc(String user);
+	Optional<List<Saying>> findByOriginContainingIgnoreCaseOrderByOriginDesc(String origin);
 
-	Optional<List<Saying>> findByUserContainingIgnoreCaseOrderByUserAsc(String user);
+	Optional<List<Saying>> findByOriginContainingIgnoreCaseOrderByOriginAsc(String origin);
 
 	@Query(value = "SELECT AVG(quality) FROM sayings", nativeQuery = true)
 	public Double avg();

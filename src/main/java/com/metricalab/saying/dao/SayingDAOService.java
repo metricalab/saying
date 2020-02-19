@@ -90,8 +90,8 @@ public class SayingDAOService implements ISayingDAOService {
 	}
 
 	@Override
-	public Optional<List<Saying>> getSayingByUser(final String user) {
-		return repository.findByUser(user);
+	public Optional<List<Saying>> getSayingByOrigin(final String origin) {
+		return repository.findByOrigin(origin);
 
 	}
 
@@ -102,20 +102,20 @@ public class SayingDAOService implements ISayingDAOService {
 	}
 
 	@Override
-	public Optional<List<Saying>> getSayingUserContains(String usuario) {
-		return repository.findByUserContainingIgnoreCase(usuario);
+	public Optional<List<Saying>> getSayingOriginContains(String origin) {
+		return repository.findByOriginContainingIgnoreCase(origin);
 
 	}
 
 	@Override
-	public Optional<List<Saying>> getSayingUserContainsOrder(String user, String order) {
+	public Optional<List<Saying>> getSayingOriginContainsOrder(String origin, String order) {
 
 		Optional<List<Saying>> ord = null;
 
 		if (ConstantsData.ASCENDENTE.equalsIgnoreCase(order)) {
-			ord = repository.findByUserContainingIgnoreCaseOrderByUserAsc(user);
+			ord = repository.findByOriginContainingIgnoreCaseOrderByOriginAsc(origin);
 		} else if (ConstantsData.DESCENDENTE.equalsIgnoreCase(order)) {
-			ord = repository.findByUserContainingIgnoreCaseOrderByUserDesc(user);
+			ord = repository.findByOriginContainingIgnoreCaseOrderByOriginDesc(origin);
 
 		}
 

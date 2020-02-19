@@ -5,12 +5,12 @@ public class SayingDTO {
 	private Long id;
 	private String text;
 	private int quality;
-	private String user;
+	private String origin;
 
-	public SayingDTO(Long id, String text, Integer quality, String user) {
+	public SayingDTO(Long id, String text, Integer quality, String origin) {
 		this.text = text;
 		this.quality = quality;
-		this.user = user;
+		this.origin = origin;
 		this.id = id;
 	}
 
@@ -42,12 +42,12 @@ public class SayingDTO {
 		this.text = text;
 	}
 
-	public String getUser() {
-		return user;
+	public String getOrigin() {
+		return origin;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setOrigin(String origin) {
+		this.origin = origin;
 	}
 
 }

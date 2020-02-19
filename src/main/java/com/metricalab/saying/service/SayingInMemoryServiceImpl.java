@@ -105,10 +105,10 @@ public class SayingInMemoryServiceImpl implements ISayingService {
 	}
 
 	@Override
-	public List<SayingDTO> getSayingByUser(final String user) {
-		log.log(Level.INFO, "Buscar refrán por el username {0}", user);
+	public List<SayingDTO> getSayingByOrigin(final String origin) {
+		log.log(Level.INFO, "Buscar refrán por el username {0}", origin);
 		final List<SayingDTO> sayings = inMemorySaying.getSaying();
-		final List<SayingDTO> result = sayings.stream().filter(saying -> saying.getUser().equals(user))
+		final List<SayingDTO> result = sayings.stream().filter(saying -> saying.getOrigin().equals(origin))
 				.collect(Collectors.toList());
 		return result;
 	}
@@ -121,18 +121,18 @@ public class SayingInMemoryServiceImpl implements ISayingService {
 	}
 
 	@Override
-	public List<SayingDTO> getContainsUser(String user) {
-		log.log(Level.INFO, () -> String.format("Obteniendo usuario %s ", user));
+	public List<SayingDTO> getContainsOrigin(String origin) {
+		log.log(Level.INFO, () -> String.format("Obteniendo usuario %s ", origin));
 		final List<SayingDTO> sayings = inMemorySaying.getSaying();
-		return sayings.stream().filter(saying -> saying.getUser().toLowerCase().contains(user.toLowerCase()))
+		return sayings.stream().filter(saying -> saying.getOrigin().toLowerCase().contains(origin.toLowerCase()))
 				.collect(Collectors.toList());
 	}
 
 	@Override
-	public List<SayingDTO> getContainsUserOrder(String user, String order) {
+	public List<SayingDTO> getContainsOriginOrder(String origin, String order) {
 		log.log(Level.INFO,
-				() -> String.format("Obteniendo usuario %s . Criterio de ordenación: %s. ", user, order));
-		final List<SayingDTO> searchResult = getContainsUser(user);
+				() -> String.format("Obteniendo usuario %s . Criterio de ordenación: %s. ", origin, order));
+		final List<SayingDTO> searchResult = getContainsOrigin(origin);
 		return sortSayingList(order, searchResult);
 	}
 

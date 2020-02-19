@@ -40,95 +40,95 @@ public class Saying {
 	@Autowired
 	ISayingService sayingService;
 
-	@GetMapping("/refranes/mejor")
+	@GetMapping("/saying/best")
 	public ResponseEntity<SayingDTO> bestSaying() {
-		log.log(Level.INFO, "Llamada al endpoint /mejorrefran ");
+		log.log(Level.INFO, "Llamada al endpoint /saying/best ");
 		return new ResponseEntity<>(sayingService.getBestSaying(), HttpStatus.OK);
 	}
 
-	@GetMapping("/refranes/{number}/{order}")
+	@GetMapping("/saying/{number}/{order}")
 	public ResponseEntity<List<SayingDTO>> saying(@PathVariable final Integer number,
 			@PathVariable final String order) {
 		// Logger con expresion lambda
 		log.log(Level.INFO, () -> String.format(
-				"Llamada al endpoint /refranes/{number}/{order}. Se quieren recuperar %s refranes con ordenación %s .",
+				"Llamada al endpoint /saying/{number}/{order}. Se quieren recuperar %s refranes con ordenación %s .",
 				number, order));
 		return new ResponseEntity<>(sayingService.getSaying(number, order), HttpStatus.OK);
 	}
 
-	@GetMapping("/refranes/numeroTotal")
+	@GetMapping("/saying/totalNum")
 	public ResponseEntity<NumSaying> numSaying() {
-		log.log(Level.INFO, "Llamada al endpoint /numerorefranes");
+		log.log(Level.INFO, "Llamada al endpoint /saying/totalNum");
 
 		return new ResponseEntity<>(new NumSaying(sayingService.getNumSaying()), HttpStatus.OK);
 	}
 
-	@GetMapping("/refranes/aleatorio")
+	@GetMapping("/saying/random")
 	public ResponseEntity<SayingDTO> sayingRandom() {
-		log.log(Level.INFO, "Llamada al endpoint /refranes/aleatorio");
+		log.log(Level.INFO, "Llamada al endpoint /saying/random");
 		return new ResponseEntity<>(sayingService.getRandomSaying(), HttpStatus.OK);
 	}
 
-	@GetMapping("/refranes/ordenar/{order}")
+	@GetMapping("/saying/sort/{order}")
 	public ResponseEntity<List<SayingDTO>> orderSaying(@PathVariable final String order) {
-		log.log(Level.INFO, "Llamada al endpoint /ordenar/refranes");
+		log.log(Level.INFO, "Llamada al endpoint /saying/sort");
 		return new ResponseEntity<>(sayingService.sortSaying(order), HttpStatus.OK);
 	}
 
-	@PostMapping("/refranes")
+	@PostMapping("/saying")
 	public ResponseEntity<SayingResponse> addSaying(@Valid @RequestBody final SayingDTO saying) {
-		log.log(Level.INFO, "Llamada al endpoint /refranes (POST)");
+		log.log(Level.INFO, "Llamada al endpoint /saying (POST)");
 		final String response = sayingService.addSaying(saying) != null ? " Saying insertado " : " Error al insertar ";
 		return new ResponseEntity<>(new SayingResponse(response), HttpStatus.OK);
 	}
 
-	@DeleteMapping("/refranes/{id}")
+	@DeleteMapping("/saying/{id}")
 	public ResponseEntity<SayingResponse> deleteSaying(@PathVariable final Long id) {
-		log.log(Level.INFO, "Llamada al endpoint /refranes/{id} (DELETE)");
+		log.log(Level.INFO, "Llamada al endpoint /saying/{id} (DELETE)");
 		sayingService.deleteSaying(id);
 		return new ResponseEntity<>(new SayingResponse("Saying con id: " + id + " borrado"), HttpStatus.OK);
 	}
 
-	@GetMapping("/refranes/{id}")
+	@GetMapping("/saying/{id}")
 	public ResponseEntity<SayingDTO> findById(@PathVariable final Long id) {
-		log.log(Level.INFO, "Llamada al endpoint /refranes/{id} (GET)");
+		log.log(Level.INFO, "Llamada al endpoint /saying/{id} (GET)");
 		return new ResponseEntity<>(sayingService.getSayingById(id), HttpStatus.OK);
 	}
 
-	@GetMapping("/refranes/user/{user}")
+	@GetMapping("/saying/user/{user}")
 	public ResponseEntity<List<SayingDTO>> findByUser(@PathVariable final String user) {
-		log.log(Level.INFO, "Llamada al endpoint /refranes/user/{user} (GET)");
-		return new ResponseEntity<>(sayingService.getSayingByUser(user), HttpStatus.OK);
+		log.log(Level.INFO, "Llamada al endpoint /saying/user/{user} (GET)");
+		return new ResponseEntity<>(sayingService.getSayingByOrigin(user), HttpStatus.OK);
 
 	}
 
-	@GetMapping("/refranes/encontrarRefran/{texto}")
+	@GetMapping("/saying/findText/{texto}")
 	public ResponseEntity<List<SayingDTO>> searchSaying(@PathVariable final String text) {
-		log.log(Level.INFO, "Llamada al endpoint /refranes/encontrarRefran/{text}");
+		log.log(Level.INFO, "Llamada al endpoint /saying/findText/{text}");
 		return new ResponseEntity<>(sayingService.getContainsSaying(text), HttpStatus.OK);
 
 	}
 
-	@GetMapping("/refranes/encontrarUsuario/{usuario}")
+	@GetMapping("/saying/findUser/{usuario}")
 	public ResponseEntity<List<SayingDTO>> searchUser(@PathVariable final String user) {
-		log.log(Level.INFO, "Llamada al endpoint /refranes/encontrarUsuario/{user}");
-		return new ResponseEntity<>(sayingService.getContainsUser(user), HttpStatus.OK);
+		log.log(Level.INFO, "Llamada al endpoint /saying/findUser/{user}");
+		return new ResponseEntity<>(sayingService.getContainsOrigin(user), HttpStatus.OK);
 	}
 
-	@GetMapping("/refranes/encontrarUsuarioOrder/{usuario}/{order}")
+	@GetMapping("/saying/findUserOrder/{usuario}/{order}")
 	public ResponseEntity<List<SayingDTO>> searchUserOrder(@PathVariable final String user,
 			@PathVariable final String order) {
 		log.log(Level.INFO, () -> String.format(
-				"Llamada al endpoint /refranes/{usuario}/{order}. Se quieren recuperar %s refranes con ordenación %s .",
+				"Llamada al endpoint /saying/{user}/{order}. Se quieren recuperar %s refranes con ordenación %s .",
 				user, order));
-		return new ResponseEntity<>(sayingService.getContainsUserOrder(user, order), HttpStatus.OK);
+		return new ResponseEntity<>(sayingService.getContainsOriginOrder(user, order), HttpStatus.OK);
 
 	}
 	
 	
-	@GetMapping("/refranes/mediaCalidad")
+	@GetMapping("/saying/avgQuality")
 	public ResponseEntity<AvgQualitySaying> avgQualitySaying() {
-		log.log(Level.INFO, "Llamada al endpoint /mediaCalidadRefranes ");
+		log.log(Level.INFO, "Llamada al endpoint /saying/avgQuality ");
 		return new ResponseEntity<>(new AvgQualitySaying(sayingService.getAvgQualitySaying()), HttpStatus.OK);
 	}
 }

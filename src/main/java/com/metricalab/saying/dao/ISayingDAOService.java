@@ -23,13 +23,13 @@ public interface ISayingDAOService {
 
 	public Optional<Saying> getSayingById(Long id);
 
-	public Optional<List<Saying>> getSayingByUser(String user);
+	public Optional<List<Saying>> getSayingByOrigin(String origin);
 
 	public Optional<List<Saying>> getSayingContains(final String text);
 
-	public Optional<List<Saying>> getSayingUserContains(final String user);
+	public Optional<List<Saying>> getSayingOriginContains(final String origin);
 
-	public Optional<List<Saying>> getSayingUserContainsOrder(final String user, final String order);
+	public Optional<List<Saying>> getSayingOriginContainsOrder(final String origin, final String order);
 
 	public Double getAvgQualitySaying();
 

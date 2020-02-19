@@ -9,11 +9,11 @@ public class SayingConverter implements GenericConverter<Saying, SayingDTO> {
 
 	@Override
 	public SayingDTO apply(final Saying input) {
-		return new SayingDTO(input.getId(), input.getText(), input.getQuality(), input.getUser());
+		return new SayingDTO(input.getId(), input.getText(), input.getQuality(), input.getOrigin());
 	}
 
 	public Saying apply(final SayingDTO output) {
-		return new Saying(output.getText(), output.getQuality(), new Date(), output.getUser());
+		return new Saying(output.getText(), output.getQuality(), new Date(), output.getOrigin());
 	}
 
 }

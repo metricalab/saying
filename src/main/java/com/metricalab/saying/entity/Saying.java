@@ -33,17 +33,17 @@ public class Saying extends Auditable<String> implements Serializable {
 	private Date lastUpdate;
 
 	@Column(nullable = false)
-	private String user;
+	private String origin;
 
 	public Saying() {
 
 	}
 
-	public Saying(String text, int quality, Date lastUpdate, String user) {
+	public Saying(String text, int quality, Date lastUpdate, String origin) {
 		this.text = text;
 		this.quality = quality;
 		this.lastUpdate = lastUpdate;
-		this.user = user;
+		this.origin = origin;
 	}
 
 	public Long getId() {
@@ -78,12 +78,12 @@ public class Saying extends Auditable<String> implements Serializable {
 		this.lastUpdate = updated;
 	}
 
-	public String getUser() {
-		return user;
+	public String getOrigin() {
+		return origin;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setOrigin(String origin) {
+		this.origin = origin;
 	}
 
 }

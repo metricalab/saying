@@ -75,9 +75,9 @@ public class SayingDataBaseServiceImpl implements ISayingService {
 	}
 
 	@Override
-	public List<SayingDTO> getSayingByUser(final String user) {
-		log.log(Level.INFO, "Buscar refrán por el username {0}", user);
-		return sayingConverter.convert(sayingDAOService.getSayingByUser(user).orElse(null));
+	public List<SayingDTO> getSayingByOrigin(final String origin) {
+		log.log(Level.INFO, "Buscar refrán por el username {0}", origin);
+		return sayingConverter.convert(sayingDAOService.getSayingByOrigin(origin).orElse(null));
 	}
 
 	@Override
@@ -88,17 +88,17 @@ public class SayingDataBaseServiceImpl implements ISayingService {
 	}
 
 	@Override
-	public List<SayingDTO> getContainsUser(final String user) {
-		log.log(Level.INFO, "Buscar Usuario", user);
-		return sayingConverter.convert(sayingDAOService.getSayingUserContains(user).orElse(null));
+	public List<SayingDTO> getContainsOrigin(final String origin) {
+		log.log(Level.INFO, "Buscar Usuario", origin);
+		return sayingConverter.convert(sayingDAOService.getSayingOriginContains(origin).orElse(null));
 	}
 
 	@Override
-	public List<SayingDTO> getContainsUserOrder(final String user, final String order) {
-		log.log(Level.INFO, "Buscar Usuario %s", user);
+	public List<SayingDTO> getContainsOriginOrder(final String origin, final String order) {
+		log.log(Level.INFO, "Buscar Usuario %s", origin);
 		log.log(Level.INFO, "Ordenado de manera %s ", order);
 		return sayingConverter
-				.convert(sayingDAOService.getSayingUserContainsOrder(user, order).orElse(null));
+				.convert(sayingDAOService.getSayingOriginContainsOrder(origin, order).orElse(null));
 
 	}
 

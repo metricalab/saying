@@ -22,13 +22,13 @@ public interface ISayingService {
 
 	public SayingDTO getSayingById(Long id);
 
-	public List<SayingDTO> getSayingByUser(String user);
+	public List<SayingDTO> getSayingByOrigin(String origin);
 
 	public List<SayingDTO> getContainsSaying(String text);
 
-	public List<SayingDTO> getContainsUser(String user);
+	public List<SayingDTO> getContainsOrigin(String origin);
 
-	public List<SayingDTO> getContainsUserOrder(String user, String order);
+	public List<SayingDTO> getContainsOriginOrder(String origin, String order);
 
 	public Double getAvgQualitySaying();
 
