@@ -102,20 +102,20 @@ public class Saying {
 
 	}
 
-	@GetMapping("/saying/findText/{texto}")
+	@GetMapping("/saying/findText/{text}")
 	public ResponseEntity<List<SayingDTO>> searchSaying(@PathVariable final String text) {
 		log.log(Level.INFO, "Llamada al endpoint /saying/findText/{text}");
 		return new ResponseEntity<>(sayingService.getContainsSaying(text), HttpStatus.OK);
 
 	}
 
-	@GetMapping("/saying/findUser/{usuario}")
+	@GetMapping("/saying/findUser/{user}")
 	public ResponseEntity<List<SayingDTO>> searchUser(@PathVariable final String user) {
 		log.log(Level.INFO, "Llamada al endpoint /saying/findUser/{user}");
 		return new ResponseEntity<>(sayingService.getContainsOrigin(user), HttpStatus.OK);
 	}
 
-	@GetMapping("/saying/findUserOrder/{usuario}/{order}")
+	@GetMapping("/saying/findUserOrder/{user}/{order}")
 	public ResponseEntity<List<SayingDTO>> searchUserOrder(@PathVariable final String user,
 			@PathVariable final String order) {
 		log.log(Level.INFO, () -> String.format(

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "acf61fd4-0bbc-4166-9349-f669a8068eb6",
+		"_postman_id": "a47366ee-7c70-4296-8f4b-3ea58474e511",
 		"name": "Metrica-Springboot-Springdata",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes/mejor",
+					"raw": "http://localhost:8090/metrica/api/saying/best",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -20,8 +20,8 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes",
-						"mejor"
+						"saying",
+						"best"
 					]
 				}
 			},
@@ -33,7 +33,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes/3/DESC",
+					"raw": "http://localhost:8090/metrica/api/saying/3/DESC",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -42,7 +42,7 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes",
+						"saying",
 						"3",
 						"DESC"
 					]
@@ -56,7 +56,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes/numeroTotal",
+					"raw": "http://localhost:8090/metrica/api/saying/totalNum",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -65,8 +65,8 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes",
-						"numeroTotal"
+						"saying",
+						"totalNum"
 					]
 				}
 			},
@@ -78,7 +78,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes/aleatorio",
+					"raw": "http://localhost:8090/metrica/api/saying/random",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -87,8 +87,8 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes",
-						"aleatorio"
+						"saying",
+						"random"
 					]
 				}
 			},
@@ -100,7 +100,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes/ordenar/ASC",
+					"raw": "http://localhost:8090/metrica/api/saying/sort/ASC",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -109,8 +109,8 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes",
-						"ordenar",
+						"saying",
+						"sort",
 						"ASC"
 					]
 				}
@@ -130,10 +130,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n \"texto\": \"En Septiembre, cosecha y no siembres\",\n \"calidad\": 18,\n \"usuario\": \"sb_postman\"\n}"
+					"raw": "{\n \"text\": \"En Septiembre, cosecha y no siembres\",\n \"quality\": 18,\n \"origin\": \"sb_postman\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes",
+					"raw": "http://localhost:8090/metrica/api/saying",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -142,7 +142,7 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes"
+						"saying"
 					]
 				}
 			},
@@ -164,7 +164,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes/11",
+					"raw": "http://localhost:8090/metrica/api/saying/11",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -173,7 +173,7 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes",
+						"saying",
 						"11"
 					]
 				}
@@ -186,7 +186,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes/1",
+					"raw": "http://localhost:8090/metrica/api/saying/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -195,7 +195,7 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes",
+						"saying",
 						"1"
 					]
 				}
@@ -208,7 +208,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes/user/sb_memory",
+					"raw": "http://localhost:8090/metrica/api/saying/user/sb_bbdd",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -217,9 +217,9 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes",
+						"saying",
 						"user",
-						"sb_memory"
+						"sb_bbdd"
 					]
 				}
 			},
@@ -231,7 +231,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/refranes/mediaCalidad",
+					"raw": "http://localhost:8090/metrica/api/saying/avgQuality",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -240,8 +240,8 @@
 					"path": [
 						"metrica",
 						"api",
-						"refranes",
-						"mediaCalidad"
+						"saying",
+						"avgQuality"
 					]
 				}
 			},
@@ -253,7 +253,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://www.juanonlab.com/metricasb/api/refranes/mejor",
+					"raw": "https://www.juanonlab.com/metricasb/api/saying/best",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -263,8 +263,8 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes",
-						"mejor"
+						"saying",
+						"best"
 					]
 				}
 			},
@@ -276,7 +276,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://www.juanonlab.com/metricasb/api/refranes/3/DESC",
+					"raw": "http://www.juanonlab.com/metricasb/api/saying/3/DESC",
 					"protocol": "http",
 					"host": [
 						"www",
@@ -286,7 +286,7 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes",
+						"saying",
 						"3",
 						"DESC"
 					]
@@ -300,7 +300,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://www.juanonlab.com/metricasb/api/refranes/numeroTotal",
+					"raw": "https://www.juanonlab.com/metricasb/api/saying/totalNum",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -310,8 +310,8 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes",
-						"numeroTotal"
+						"saying",
+						"totalNum"
 					]
 				}
 			},
@@ -323,7 +323,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://www.juanonlab.com/metricasb/api/refranes/aleatorio",
+					"raw": "https://www.juanonlab.com/metricasb/api/saying/random",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -333,8 +333,8 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes",
-						"aleatorio"
+						"saying",
+						"random"
 					]
 				}
 			},
@@ -346,7 +346,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://www.juanonlab.com/metricasb/api/refranes/ordenar/DESC",
+					"raw": "https://www.juanonlab.com/metricasb/api/saying/sort/DESC",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -356,8 +356,8 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes",
-						"ordenar",
+						"saying",
+						"sort",
 						"DESC"
 					]
 				}
@@ -380,7 +380,7 @@
 					"raw": "{\n \"texto\": \"En Septiembre, cosecha y no siembres\",\n \"calidad\": 18,\n \"usuario\": \"sb_postman\"\n}"
 				},
 				"url": {
-					"raw": "https://www.juanonlab.com/metricasb/api/refranes",
+					"raw": "https://www.juanonlab.com/metricasb/api/saying",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -390,7 +390,7 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes"
+						"saying"
 					]
 				}
 			},
@@ -412,7 +412,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://www.juanonlab.com/metricasb/api/refranes/11",
+					"raw": "https://www.juanonlab.com/metricasb/api/saying/11",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -422,7 +422,7 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes",
+						"saying",
 						"11"
 					]
 				}
@@ -435,7 +435,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://www.juanonlab.com/metricasb/api/refranes/1",
+					"raw": "https://www.juanonlab.com/metricasb/api/saying/1",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -445,7 +445,7 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes",
+						"saying",
 						"1"
 					]
 				}
@@ -458,7 +458,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://www.juanonlab.com/metricasb/api/refranes/user/sb_postman",
+					"raw": "https://www.juanonlab.com/metricasb/api/saying/user/sb_postman",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -468,7 +468,7 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes",
+						"saying",
 						"user",
 						"sb_postman"
 					]
@@ -482,7 +482,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://www.juanonlab.com/metricasb/api/refranes/mediaCalidad",
+					"raw": "https://www.juanonlab.com/metricasb/api/saying/avgQuality",
 					"protocol": "https",
 					"host": [
 						"www",
@@ -492,8 +492,8 @@
 					"path": [
 						"metricasb",
 						"api",
-						"refranes",
-						"mediaCalidad"
+						"saying",
+						"avgQuality"
 					]
 				}
 			},
