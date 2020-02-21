@@ -18,6 +18,8 @@ Existen multitud de tecnologías y conceptos incluidos en el código entre las q
  * Patrones de diseño y de arquitectura (DAO, DTO...)
  * Generación de logs
  * Campos para auditorías
+ * Swagger
+ * Preparado para guardarse en una imagen docker
 
 ## Descarga del proyecto
 
@@ -65,10 +67,10 @@ El proyecto corre por defecto por el puerto **8090** accediendo al fichero **apl
 
 ## Uso de la aplicación con Docker
 
-Este software está preparado para docker. 
+Este software está preparado para correr en **Docker**. 
 
 Requisitos:
-- Maven preparado para lanzarse desde línea de comandos
+- Maven desde línea de comandos
 - Docker instalado
 - JDK Correctamente instalado para la versión 11
 - Entorno de desarrollo con docker de métrica funcionando. Localizado en xxx.
@@ -122,4 +124,14 @@ Es recomendable utilizar postman para hacer pruebas sobre las llamadas. Esta apl
 ```
 
 Un fichero llamado **Metrica-Springboot-Springdata.postman_collection.json** que contiene todas las llamadas posibles realizables tanto en local como en el servidor juanonlab.com . Para hacer uso de este json es necesario abrir postman y en la parte superior derecha del programa hacer clic en **import** y arrastrar este fichero json.
+
+## Para acceder a Swagger
+
+El acceso a swagger se realizaría desde
+
+```
+http://localhost:8090/metrica/swagger-ui.html
+```
+
+Suponiendo que la aplicación se lance desde local o desde un contenedor docker en local
 
