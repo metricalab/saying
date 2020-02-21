@@ -57,7 +57,7 @@ spring:
 ```
 Se encuentran los valores de conexión.
 
-Existe un fichero **application-dock.yml** que permite correr la aplicación con el entorno de desarrollo de métrica con Docker. Ver proyecto xxx.
+Existe un fichero **application-dock.yml** que permite correr la aplicación con el entorno de desarrollo de métrica con Docker. Ver proyecto https://github.com/metricalab/entornoDockerMetrica.
 
 ## Lanzar el proyecto
 
@@ -73,7 +73,7 @@ Requisitos:
 - Maven desde línea de comandos
 - Docker instalado
 - JDK Correctamente instalado para la versión 11
-- Entorno de desarrollo con docker de métrica funcionando. Localizado en xxx.
+- Entorno de desarrollo con docker de métrica funcionando. Localizado en https://github.com/metricalab/entornoDockerMetrica.
 
 Desde el directorio raiz del proyecto y en un consola (en windows se recomienda usar git bash) Se debe lanzar el comando:
 
@@ -133,5 +133,5 @@ El acceso a swagger se realizaría desde
 http://localhost:8090/metrica/swagger-ui.html
 ```
 
-Suponiendo que la aplicación se lance desde local o desde un contenedor docker en local
+Suponiendo que la aplicación se lance desde local o desde un contenedor docker en local.
 
