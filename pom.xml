@@ -11,12 +11,12 @@
 	</parent>
 	<groupId>com.metricalab.saying</groupId>
 	<artifactId>metrica-saying</artifactId>
-	<version>0.0.1-jl</version>
+	<version>0.0.1</version>
 	<name>saying</name>
 	<description>Aplicación Spring Boot Saying</description>
 
 	<properties>
-		<java.version>8</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
@@ -81,7 +81,6 @@
 		<dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.20</version>
         </dependency>
 
 	</dependencies>
