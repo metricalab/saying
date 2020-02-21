@@ -55,26 +55,67 @@ spring:
 ```
 Se encuentran los valores de conexión.
 
+Existe un fichero **application-dock.yml** que permite correr la aplicación con el entorno de desarrollo de métrica con Docker. Ver proyecto xxx.
+
 ## Lanzar el proyecto
 
 Para lanzar el proyecto es necesarui hacer clic en el proyecto desde el IDE e ir a: **Run As -> Spring Boot App**
 
 El proyecto corre por defecto por el puerto **8090** accediendo al fichero **aplication.yml** se puede cambiar este parámetro
 
-## Adaptación a JAVA 11
+## Uso de la aplicación con Docker
 
-Este proyecto es compatible con JAVA 11 siempre que se realice una pequeña modificación en el **pom.xml** del proyecto. 
-Este fichero está localizado en la raiz de la carpeta (refranes). Es necesario modifcar la sección properties y substituir 8 por 11.
+Este software está preparado para docker. 
+
+Requisitos:
+- Maven preparado para lanzarse desde línea de comandos
+- Docker instalado
+- JDK Correctamente instalado para la versión 11
+- Entorno de desarrollo con docker de métrica funcionando. Localizado en xxx.
+
+Desde el directorio raiz del proyecto y en un consola (en windows se recomienda usar git bash) Se debe lanzar el comando:
+
 ```
-	<properties>
-		<java.version>11</java.version>
-	</properties>
- ```
-Después del cambio es necesario relanzar el proyecto.
+mvn clean compile install
+```
+
+El proyecto quedará empaquetado en la ruta **/target/**
+
+Para construir la imagen de docker:
+
+```
+docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg BUILD_VERSION=0.0.1 -t metricadock/metrica-saying:0.0.1 .
+```
+
+Para lanzar el contenedor:
+
+```
+docker run -e "SPRING_PROFILES_ACTIVE=dock" -p 8090:8090 -t -d --name metrica-saying metricadock/metrica-saying:0.0.1
+```
+
+Parar el contenedor:
+
+```
+docker stop metrica-saying
+```
+
+Borrar el contenedor:
+
+```
+docker rm metrica-saying
+```
+
+Revisar los logs:
+
+```
+docker logs metrica-saying
+```
+
+La aplicación correrá sobre el puerto **8090**.
 
 ## Uso de Postman
 
-Es recomendable utilizar postman. Esta aplicación incorpora en la ruta:
+Es recomendable utilizar postman para hacer pruebas sobre las llamadas. Esta aplicación incorpora en la ruta:
 
 ```
 ../saying/src/main/resources/static/postman
