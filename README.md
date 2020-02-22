@@ -1,5 +1,5 @@
 
-|Refranes | ![Metrica](https://github.com/metricalab/refranes/blob/master/src/main/resources/static/metricaLogo.jpg) |
+|Saying java Backend | ![Metrica](https://github.com/metricalab/refranes/blob/master/src/main/resources/static/metricaLogo.jpg) |
 |-------|--------|
 
 Refranes es un proyecto tipo CRUD que permite consultar los refranes guardados en memoria así como en base de datos. Tiene fundamentalmente una misión didáctica. 
