@@ -1,8 +1,8 @@
 
-|Refranes | ![Metrica](https://github.com/metricalab/refranes/blob/master/src/main/resources/static/metricaLogo.jpg) |
+|Saying Java (Springboot 2) Backend | ![Metrica](https://github.com/metricalab/refranes/blob/master/src/main/resources/static/metricaLogo.jpg) |
 |-------|--------|
 
-Refranes es un proyecto tipo CRUD que permite consultar los refranes guardados en memoria así como en base de datos. Tiene fundamentalmente una misión didáctica. 
+Saying es un proyecto tipo CRUD que permite consultar los refranes guardados en memoria así como en base de datos. Tiene fundamentalmente una misión didáctica. 
 
 ## Tecnologías/librerías
 
@@ -18,6 +18,8 @@ Existen multitud de tecnologías y conceptos incluidos en el código entre las q
  * Patrones de diseño y de arquitectura (DAO, DTO...)
  * Generación de logs
  * Campos para auditorías
+ * Swagger
+ * Preparado para guardarse en una imagen docker
 
 ## Descarga del proyecto
 
@@ -55,30 +57,81 @@ spring:
 ```
 Se encuentran los valores de conexión.
 
+Existe un fichero **application-dock.yml** que permite correr la aplicación con el entorno de desarrollo de métrica con Docker. Ver proyecto https://github.com/metricalab/entornoDockerMetrica.
+
 ## Lanzar el proyecto
 
 Para lanzar el proyecto es necesarui hacer clic en el proyecto desde el IDE e ir a: **Run As -> Spring Boot App**
 
 El proyecto corre por defecto por el puerto **8090** accediendo al fichero **aplication.yml** se puede cambiar este parámetro
 
-## Adaptación a JAVA 11
+## Uso de la aplicación con Docker
 
-Este proyecto es compatible con JAVA 11 siempre que se realice una pequeña modificación en el **pom.xml** del proyecto. 
-Este fichero está localizado en la raiz de la carpeta (refranes). Es necesario modifcar la sección properties y substituir 8 por 11.
+Este software está preparado para correr en **Docker**. 
+
+Requisitos:
+- Maven desde línea de comandos
+- Docker instalado
+- JDK Correctamente instalado para la versión 11
+- Entorno de desarrollo con docker de métrica funcionando. Localizado en https://github.com/metricalab/entornoDockerMetrica.
+
+Desde el directorio raiz del proyecto y en un consola (en windows se recomienda usar git bash) Se debe lanzar el comando:
+
 ```
-	<properties>
-		<java.version>11</java.version>
-	</properties>
- ```
-Después del cambio es necesario relanzar el proyecto.
+mvn clean compile install
+```
+
+El proyecto quedará empaquetado en la ruta **/target/**
+
+Para construir la imagen de docker:
+
+```
+docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg BUILD_VERSION=0.0.1 -t metricadock/metrica-saying:0.0.1 .
+```
+
+Para lanzar el contenedor:
+
+```
+docker run -e "SPRING_PROFILES_ACTIVE=dock" -p 8090:8090 -t -d --name metrica-saying metricadock/metrica-saying:0.0.1
+```
+
+Parar el contenedor:
+
+```
+docker stop metrica-saying
+```
+
+Borrar el contenedor:
+
+```
+docker rm metrica-saying
+```
+
+Revisar los logs:
+
+```
+docker logs metrica-saying
+```
+
+La aplicación correrá sobre el puerto **8090**.
 
 ## Uso de Postman
 
-Es recomendable utilizar postman. Esta aplicación incorpora en la ruta:
+Es recomendable utilizar postman para hacer pruebas sobre las llamadas. Esta aplicación incorpora en la ruta:
 
 ```
 ../saying/src/main/resources/static/postman
 ```
 
 Un fichero llamado **Metrica-Springboot-Springdata.postman_collection.json** que contiene todas las llamadas posibles realizables tanto en local como en el servidor juanonlab.com . Para hacer uso de este json es necesario abrir postman y en la parte superior derecha del programa hacer clic en **import** y arrastrar este fichero json.
+
+## Para acceder a Swagger
+
+El acceso a swagger se realizaría desde
+
+```
+http://localhost:8090/metrica/swagger-ui.html
+```
+
+Suponiendo que la aplicación se lance desde local o desde un contenedor docker en local.
 
