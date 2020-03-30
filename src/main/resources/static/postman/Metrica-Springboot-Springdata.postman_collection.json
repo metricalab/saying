@@ -11,12 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying/best",
+					"raw": "http://localhost:8290/metrica/api/saying/best",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
@@ -33,12 +33,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying/3/DESC",
+					"raw": "http://localhost:8290/metrica/api/saying/3/DESC",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
@@ -56,12 +56,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying/totalNum",
+					"raw": "http://localhost:8290/metrica/api/saying/totalNum",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
@@ -78,12 +78,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying/random",
+					"raw": "http://localhost:8290/metrica/api/saying/random",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
@@ -100,12 +100,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying/sort/ASC",
+					"raw": "http://localhost:8290/metrica/api/saying/sort/ASC",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
@@ -133,12 +133,12 @@
 					"raw": "{\n \"text\": \"En Septiembre, cosecha y no siembres\",\n \"quality\": 18,\n \"origin\": \"sb_postman\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying",
+					"raw": "http://localhost:8290/metrica/api/saying",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
@@ -164,12 +164,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying/11",
+					"raw": "http://localhost:8290/metrica/api/saying/11",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
@@ -186,12 +186,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying/1",
+					"raw": "http://localhost:8290/metrica/api/saying/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
@@ -208,12 +208,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying/user/sb_bbdd",
+					"raw": "http://localhost:8290/metrica/api/saying/user/sb_bbdd",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
@@ -231,12 +231,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8090/metrica/api/saying/avgQuality",
+					"raw": "http://localhost:8290/metrica/api/saying/avgQuality",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8090",
+					"port": "8290",
 					"path": [
 						"metrica",
 						"api",
