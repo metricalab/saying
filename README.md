@@ -63,7 +63,7 @@ Existe un fichero **application-dock.yml** que permite correr la aplicación con
 
 Para lanzar el proyecto es necesarui hacer clic en el proyecto desde el IDE e ir a: **Run As -> Spring Boot App**
 
-El proyecto corre por defecto por el puerto **8090** accediendo al fichero **aplication.yml** se puede cambiar este parámetro
+El proyecto corre por defecto por el puerto **8290** accediendo al fichero **aplication.yml** se puede cambiar este parámetro
 
 ## Uso de la aplicación con Docker
 
@@ -92,7 +92,7 @@ docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg
 Para lanzar el contenedor:
 
 ```
-docker run -e "SPRING_PROFILES_ACTIVE=dock" -p 8090:8090 -t -d --name metrica-saying metricadock/metrica-saying:0.0.1
+docker run -e "SPRING_PROFILES_ACTIVE=dock" -p 8290:8290 -t -d --name metrica-saying metricadock/metrica-saying:0.0.1
 ```
 
 Parar el contenedor:
@@ -113,7 +113,7 @@ Revisar los logs:
 docker logs metrica-saying
 ```
 
-La aplicación correrá sobre el puerto **8090**.
+La aplicación correrá sobre el puerto **8290**.
 
 ## Uso de Postman
 
@@ -130,7 +130,7 @@ Un fichero llamado **Metrica-Springboot-Springdata.postman_collection.json** que
 El acceso a swagger se realizaría desde
 
 ```
-http://localhost:8090/metrica/swagger-ui.html
+http://localhost:8290/metrica/swagger-ui.html
 ```
 
 Suponiendo que la aplicación se lance desde local o desde un contenedor docker en local.
