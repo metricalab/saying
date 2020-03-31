@@ -20,14 +20,14 @@ spring:
     url: 
       jdbc:mysql://localhost/db_sayings?useSSL=false
     username:
-      root
+      tasksuser
     password:
-      metrica123
+      taskspassword
     driver-class-name:
-      org.mariadb.jdbc.Driver
+      com.mysql.jdbc.Driver
   jpa:
     database-platform: 
-      org.hibernate.dialect.MariaDB103Dialect
+      org.hibernate.dialect.MySQL5Dialect
     hibernate.ddl-auto:
       create-drop      
 
