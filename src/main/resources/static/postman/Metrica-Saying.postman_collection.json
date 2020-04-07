@@ -1,0 +1,694 @@
+{
+	"info": {
+		"_postman_id": "10bdbc14-70e4-4f12-8cf0-43ec608ae93c",
+		"name": "Metrica-Saying",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Local-1-mejorRefran",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying/best",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"best"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local-2-Obtener numero refranes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying/3/DESC",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"3",
+								"DESC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local-3-Numero de refranes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying/totalNum",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"totalNum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local-4-Refrán aleatorio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying/random",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"random"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local-5-Refránes ordenados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying/sort/ASC",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"sort",
+								"ASC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local-6-Insertar Refrán",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"text\": \"En Septiembre, cosecha y no siembres\",\n \"quality\": 18,\n \"origin\": \"sb_postman\"\n}"
+						},
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local-7-Borrar refrán",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying/11",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local-8-Buscar por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying/1",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local-9-Buscar por usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying/user/sb_bbdd",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"user",
+								"sb_bbdd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Local-10-Media Calidad Refranes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localsaying}}/metrica/api/saying/avgQuality",
+							"host": [
+								"{{localsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"avgQuality"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "InternalIP",
+			"item": [
+				{
+					"name": "Internal-1-mejorRefran",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying/best",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"best"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal-2-Obtener numero refranes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying/3/DESC",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"3",
+								"DESC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal-3-Numero de refranes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying/totalNum",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"totalNum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal-4-Refrán aleatorio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying/random",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"random"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal-5-Refránes ordenados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying/sort/ASC",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"sort",
+								"ASC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal-6-Insertar Refrán",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"text\": \"En Septiembre, cosecha y no siembres\",\n \"quality\": 18,\n \"origin\": \"sb_postman\"\n}"
+						},
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal-7-Borrar refrán",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying/11",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal-8-Buscar por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying/1",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal-9-Buscar por usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying/user/sb_bbdd",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"user",
+								"sb_bbdd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Internal-10-Media Calidad Refranes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{internalsaying}}/metrica/api/saying/avgQuality",
+							"host": [
+								"{{internalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"avgQuality"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "External",
+			"item": [
+				{
+					"name": "External-1-mejorRefran Server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying/best",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"best"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External-2-Obtener numero refranes Server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying/3/DESC",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"3",
+								"DESC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External-3-Numero de refranes Server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying/totalNum",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"totalNum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External-4-Refrán aleatorio Server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying/random",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"random"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External-5-Refránes ordenados Server",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying/sort/DESC",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"sort",
+								"DESC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External-6-Insertar Refrán Server",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \"text\": \"En Septiembre, cosecha y no siembres\",\n \"quality\": 18,\n \"origin\": \"sb_postman\"\n}"
+						},
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External-7-Borrar refrán Server",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying/10",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External-8-Buscar por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying/1",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External-9-Buscar por usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying/user/sb_postman",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"user",
+								"sb_postman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "External-10-Media Calidad Refranes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{externalsaying}}/metrica/api/saying/avgQuality",
+							"host": [
+								"{{externalsaying}}"
+							],
+							"path": [
+								"metrica",
+								"api",
+								"saying",
+								"avgQuality"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
