@@ -42,7 +42,7 @@ Es necesario disponer de una base de datos para MariaDB que corra en localhost. 
 | Propiedad | Valor |
 |-------------------------------|-------------------------------------------------|
 | Cadena de conexión utilizada: | jdbc:mysql://localhost/db_sayings?useSSL=false&allowPublicKeyRetrieval=true |
-| Nombre de base de datos:      | db_refranes                                     |
+| Nombre de base de datos:      | db_sayings                                      |
 | Usuario de la bbdd:           | root                                            |
 | Password de la bbdd:          | metrica123                                      |
 
