@@ -2,6 +2,10 @@ package com.metricalab.saying.utils;
 
 public class ConstantsData {
 
+	private ConstantsData() {
+		throw new IllegalStateException("Utility class");
+	}
+
 	public static final String CODE_ERR_SEARCH_SAYING = "REF001";
 	public static final String MESS_ERR_SEARCH_SAYING = "Id no encontrado en la base de datos.";
 
