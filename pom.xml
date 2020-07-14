@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.metricalab.saying</groupId>
 	<artifactId>metrica-saying</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<name>saying</name>
 	<description>Aplicación Spring Boot Saying</description>
 
@@ -80,6 +80,14 @@
 
 	</dependencies>
 
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>7cf5af9eeceb-releases</name>
+			<url>http://sfwwdesa0002:8082/artifactory/libs-release-local</url>
+		</repository>
+	</distributionManagement>
+	
 	<build>
 		<plugins>
 			<plugin>
