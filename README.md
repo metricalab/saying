@@ -67,7 +67,7 @@ El proyecto corre por defecto por el puerto **8290** accediendo al fichero **apl
 
 ## Uso de la aplicación sin Docker
 
-Si no se va a disponer de Docker es necesario disponer de una base de datos mysql8 corriendo en el ordenador. Es necesario tener creada la base de datos **db_refranes**. Por defecto usado el usuario **root** y la contraseña **metrica123** aunque estos dos últimos parametros se pueden cambiar en el fichero **application.yml**. Se puede usar por ejemplo el programa **xampp** o similar para disponer de la base de datos.
+Si no se va a disponer de Docker es necesario disponer de una base de datos mysql8 corriendo en el ordenador. Es necesario tener creada la base de datos **db_sayings**. Por defecto usado el usuario **root** y la contraseña **metrica123** aunque estos dos últimos parametros se pueden cambiar en el fichero **application.yml**. Se puede usar por ejemplo el programa **xampp** o similar para disponer de la base de datos.
 
 ## Uso de la aplicación con Docker
 
