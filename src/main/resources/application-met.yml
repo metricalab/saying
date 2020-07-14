@@ -35,7 +35,7 @@ metrica:
   data:
     # Possible Values: dataBase | inMemory
     service:
-        inMemory
+        dataBase
        
 
       
