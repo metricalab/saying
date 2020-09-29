@@ -97,8 +97,7 @@ public class SayingDataBaseServiceImpl implements ISayingService {
 	public List<SayingDTO> getContainsOriginOrder(final String origin, final String order) {
 		log.log(Level.INFO, "Buscar Usuario %s", origin);
 		log.log(Level.INFO, "Ordenado de manera %s ", order);
-		return sayingConverter
-				.convert(sayingDAOService.getSayingOriginContainsOrder(origin, order).orElse(null));
+		return sayingConverter.convert(sayingDAOService.getSayingOriginContainsOrder(origin, order).orElse(null));
 
 	}
 
