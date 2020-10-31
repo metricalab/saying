@@ -96,7 +96,7 @@ docker build --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') --build-arg
 Para lanzar el contenedor:
 
 ```
-docker run -e "SPRING_PROFILES_ACTIVE=met" -p 8290:8290 -t -d --name metrica-saying metricadock/metrica-saying:0.0.1
+docker run --network=entornodockermetrica_metrica-network -e "SPRING_PROFILES_ACTIVE=dock" -p 8290:8290 -t -d --name metrica-saying metricadock/metrica-saying:0.0.1
 ```
 
 Parar el contenedor:
