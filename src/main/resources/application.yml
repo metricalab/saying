@@ -24,10 +24,10 @@ spring:
     password:
       metrica123
     driver-class-name:
-      com.mysql.jdbc.Driver
+      com.mysql.cj.jdbc.Driver
   jpa:
     database-platform: 
-      org.hibernate.dialect.MySQL5Dialect
+      org.hibernate.dialect.MySQL8Dialect
     hibernate.ddl-auto:
       create-drop      
 

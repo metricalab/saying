@@ -18,7 +18,7 @@ logging:
 spring:
   datasource:
     url: 
-      jdbc:mysql://host.docker.internal/db_sayings?useSSL=false&allowPublicKeyRetrieval=true
+      jdbc:mysql://metrica-mysql:3306/db_sayings?useSSL=false&allowPublicKeyRetrieval=true
     username:
       root
     password:
