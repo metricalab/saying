@@ -33,7 +33,7 @@ spring:
 
 metrica:
   data:
-    # Possible Values: dataBase | inMemory
+    # Possible values: dataBase | inMemory
     service:
         inMemory
        
